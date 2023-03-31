@@ -72,7 +72,7 @@ console.log("running")
 
       <div>
       {!whenSuccess&& <Fragment>
-        <Row align="middle" className="justify-center">
+        <Row align="middle" className="flex justify-center">
           <Col className={`w-[300px] md:w-[400px] lg:w-[500px] justify-center`}>
             <Card
               title="Enter new password"
