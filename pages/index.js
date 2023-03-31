@@ -26,8 +26,9 @@ console.log(code)
     setIsLoading(true);
     try {
       if (values.password === values.confirmpassword) {
+        console.log(isLoading)
         // Request API.
-
+console.log([values.password,values.confirmpassword])
         axios
           .post(
             `${process.env.NEXT_PUBLIC_BACKEND_LINK}${process.env.NEXT_PUBLIC_RESET_PASSWORD_API}`,
@@ -58,9 +59,6 @@ console.log(code)
     }
   };
 
-  useEffect(() => {
-    console.log("running");
-  }, []);
 
   return (
     <>
@@ -108,7 +106,7 @@ console.log(code)
                             },
                           ]}
                         >
-                          <Input placeholder="Password" required min="6" />
+                          <Input placeholder="Password" required minLength={6} />
                         </Form.Item>
                         <Form.Item
                           label="Confirmpassword"
@@ -127,13 +125,6 @@ console.log(code)
                           />
                         </Form.Item>
 
-                        {/* <Form.Item
-                  label="Password"
-                  name="password"
-                  rules={[{ required: true, min: 6 }]}
-                >
-                  <Input.Password placeholder="Password" />
-                </Form.Item> */}
 
                         <Form.Item>
                           <Button

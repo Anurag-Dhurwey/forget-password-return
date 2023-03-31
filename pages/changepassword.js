@@ -31,7 +31,7 @@ export default function Forgotpassword() {
           setIsLoading(true);
           try {
              if(values.password===values.confirmpassword){
-  
+              console.log(isLoading)
               // Request API.
               axios
                 .post(`${process.env.NEXT_PUBLIC_BACKEND_LINK}${process.env.NEXT_PUBLIC_CHANGE_PASSWORD_API}`,
@@ -65,6 +65,7 @@ export default function Forgotpassword() {
             console.error(error);
             setError(error?.message ?? "Something went wrong!");
           } finally {
+            console.log(isLoading)
             setIsLoading(false);
           }
         };
