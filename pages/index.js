@@ -26,9 +26,7 @@ console.log(code)
     setIsLoading(true);
     try {
       if (values.password === values.confirmpassword) {
-        console.log(isLoading)
         // Request API.
-console.log([values.password,values.confirmpassword])
         axios
           .post(
             `${process.env.NEXT_PUBLIC_BACKEND_LINK}${process.env.NEXT_PUBLIC_RESET_PASSWORD_API}`,
