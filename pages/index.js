@@ -154,6 +154,9 @@ console.log("running")
               Go to Digital shop
           </Link>
       </div>}
+      <Link href={'/forgotpassword'}>
+      forgotpassword
+      </Link>
     </div>
     </>
   )
