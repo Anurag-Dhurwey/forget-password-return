@@ -17,7 +17,7 @@ import axios from "axios";
 export default function Home() {
   const router = useRouter();
   const { code } = router.query;
-
+console.log(code)
   const [whenSuccess, setWhenSuccess] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -65,9 +65,9 @@ export default function Home() {
   return (
     <>
       <div className="bg-black h-[100%]">
-        <div className="text-white text-center font-bold ">
+       {!code &&<div className="text-white text-center font-bold ">
           <h2>Token expired</h2>
-        </div>
+        </div>}
 
         {code && (
           <div>

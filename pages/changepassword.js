@@ -21,6 +21,7 @@ export default function Forgotpassword() {
     
     const router = useRouter()
     const {token}=router.query
+    console.log(token)
   
       const [whenSuccess,setWhenSuccess]=useState(false)
       const [isLoading, setIsLoading] = useState(false);
@@ -71,7 +72,7 @@ export default function Forgotpassword() {
   return (
    <>
    <div className="bg-black h-[100%]">
-    <div className="text-white text-center font-bold "><h2>Token expired</h2></div>
+   {!token  &&<div className="text-white text-center font-bold "><h2>Token expired</h2></div>}
     {token &&  <div >
     {!whenSuccess&& <Fragment>
       <Row align="middle" className="flex justify-center items-center">
