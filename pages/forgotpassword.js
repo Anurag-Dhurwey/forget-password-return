@@ -69,7 +69,10 @@ export default function Forgotpassword() {
         };
 
   return (
-    <div className="bg-black">
+   <>
+   <div className="bg-black h-[100%]">
+    <div className="text-white text-center font-bold "><h2>Token expired</h2></div>
+    {token &&  <div >
     {!whenSuccess&& <Fragment>
       <Row align="middle" className="flex justify-center items-center">
         <Col className={`w-[300px] md:w-[400px] lg:w-[500px] justify-center`}>
@@ -159,6 +162,8 @@ export default function Forgotpassword() {
             Go to Digital shop
         </Link>
     </div>}
-  </div>
+  </div>}
+   </div>
+   </>
   )
 }
