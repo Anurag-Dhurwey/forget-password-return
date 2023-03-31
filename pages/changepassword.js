@@ -28,8 +28,8 @@ export default function Forgotpassword() {
       const [error, setError] = useState("");
   
       const onFinish = async (values) => {
-          setIsLoading(true);
-          try {
+        try {
+            setIsLoading(true);
              if(values.newpassword===values.newconfirmpassword){
               // Request API.
               axios
@@ -107,7 +107,7 @@ export default function Forgotpassword() {
                   },
                 ]}
               >
-                <Input placeholder="Password" required  min={6}/>
+                <Input placeholder="Current password" required  minLength={6}/>
               </Form.Item>
               <Form.Item
                 label="New password"
@@ -121,7 +121,7 @@ export default function Forgotpassword() {
                   },
                 ]}
               >
-                <Input placeholder="Password" required  min={6}/>
+                <Input placeholder="New password" required  minLength={6}/>
               </Form.Item>
               <Form.Item
                 label="Confirm password"
@@ -133,7 +133,7 @@ export default function Forgotpassword() {
                   },
                 ]}
               >
-                <Input placeholder="Confirm password" required min={6}/>
+                <Input placeholder="Confirm password" required minLength={6}/>
               </Form.Item>
 
               <Form.Item>

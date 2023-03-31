@@ -23,8 +23,8 @@ console.log(code)
   const [error, setError] = useState("");
 
   const onFinish = async (values) => {
-    setIsLoading(true);
     try {
+      setIsLoading(true);
       if (values.password === values.confirmpassword) {
         // Request API.
         axios
@@ -157,9 +157,6 @@ console.log(code)
                 </Link>
               </div>
             )}
-            <Link className="text-red-800" href={"/forgotpassword"}>
-              forgotpassword
-            </Link>
           </div>
         )}
       </div>
