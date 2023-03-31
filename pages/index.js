@@ -70,9 +70,9 @@ console.log("running")
   return (
     <>
 
-      <div>
+      <div className="bg-black h-[100%]">
       {!whenSuccess&& <Fragment>
-        <Row align="middle" className="flex justify-center">
+        <Row align="middle" className="flex justify-center items-center">
           <Col className={`w-[300px] md:w-[400px] lg:w-[500px] justify-center`}>
             <Card
               title="Enter new password"
@@ -154,7 +154,7 @@ console.log("running")
               Go to Digital shop
           </Link>
       </div>}
-      <Link href={'/forgotpassword'}>
+      <Link className="text-red-800" href={'/forgotpassword'}>
       forgotpassword
       </Link>
     </div>
